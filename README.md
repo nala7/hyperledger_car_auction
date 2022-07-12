@@ -35,5 +35,3 @@ Las funciones del producto requeridas se pueden generalizar en:
 - Verificar el ganador de la subasta.
 
 ## Diseño del chaincode
-
-![alt text](schema.svg "Title")
