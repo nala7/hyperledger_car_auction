@@ -40,8 +40,8 @@ def validate_auction(car: Car):
 
 # Pujar
 @app.post("/bid")
-def bid(car: Car):
-    return {"item_name": car.brand, "item_id": car.id}
+def bid(car: Car, amount: int):
+    return {"item_name": car.brand, "item_id": car.id, "amount": amount}
 
 # Registrar usuario
 @app.post("/register")
