@@ -35,3 +35,4 @@ Las funciones del producto requeridas se pueden generalizar en:
 - Verificar el ganador de la subasta.
 
 ## Diseño del chaincode
+![HyperledgerSchema drawio](https://user-images.githubusercontent.com/62756227/178613896-c9c9aee0-c27a-4c53-9c5b-404c4728d7bd.svg)
