@@ -13,15 +13,22 @@ class User(BaseModel):
     id: str
     name: str
 
-# Crear
-@app.post("/create")
-def create_auction(car: Car, owner: User):
-    return {"item_name": car.brand, "item_id": car.id, "owner_id": owner.id}
-
 # Obtener
 @app.get("/")
 def get_cars():
     return {"items": []}
+
+# Registrar usuario
+@app.post("/register")
+def register_user(user: User):
+    return {"user_name": user.name}
+
+### Usuarios vendedores ###
+
+# Crear
+@app.post("/create")
+def create_auction(car: Car, owner: User):
+    return {"item_name": car.brand, "item_id": car.id, "owner_id": owner.id}
 
 # Iniciar
 @app.post("/start")
@@ -38,12 +45,10 @@ def close_auction(car: Car):
 def validate_auction(car: Car):
     return {"item_name": car.brand, "item_id": car.id}
 
+
+### Usuarios compradores ###
+
 # Pujar
 @app.post("/bid")
 def bid(car: Car, amount: int):
     return {"item_name": car.brand, "item_id": car.id, "amount": amount}
-
-# Registrar usuario
-@app.post("/register")
-def register_user(user: User):
-    return {"user_name": user.name}
