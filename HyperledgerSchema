@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-12T20:16:57.077Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="eu4R4uaXWsgm9Fm1ZDYl" version="20.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-12T22:16:18.524Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="JNlX4C2qfeEY94HjnkOY" version="20.0.4" type="github">
   <diagram id="n12JrOuev476QI7eu3cq" name="Page-1">
-    <mxGraphModel dx="1026" dy="432" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1207" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -43,16 +43,22 @@
         <mxCell id="XBAgku2VYMVnsYUy3Yea-34" value="Comprador" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="940" y="190" width="120" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="XBAgku2VYMVnsYUy3Yea-35" value="Notificar" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=18;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.98;exitY=0.364;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="XBAgku2VYMVnsYUy3Yea-1" target="XBAgku2VYMVnsYUy3Yea-34" edge="1">
+        <mxCell id="XBAgku2VYMVnsYUy3Yea-35" value="Notificar" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=18;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.983;exitY=0.637;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="XBAgku2VYMVnsYUy3Yea-1" target="XBAgku2VYMVnsYUy3Yea-34" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="720" y="233" as="sourcePoint" />
             <mxPoint x="830" y="170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="XBAgku2VYMVnsYUy3Yea-36" value="Apostar" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=18;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="XBAgku2VYMVnsYUy3Yea-34" edge="1">
+        <mxCell id="XBAgku2VYMVnsYUy3Yea-36" value="Registrarse" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=18;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
-            <mxPoint x="720" y="390.3399999999999" as="sourcePoint" />
-            <mxPoint x="710" y="318" as="targetPoint" />
+            <mxPoint x="940" y="220" as="sourcePoint" />
+            <mxPoint x="710" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DMyNyMtvCmwNQKJGbzjL-1" value="Pujar" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=18;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="XBAgku2VYMVnsYUy3Yea-34">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="920" y="275" as="sourcePoint" />
+            <mxPoint x="720" y="275" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
