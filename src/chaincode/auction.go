@@ -276,7 +276,7 @@ func (s *SmartContract) CloseAuction(ctx contractapi.TransactionContextInterface
 }
 
 // VerifyAuction updates the owner field of car with given id in world state
-func (s *SmartContract) VerifyAuction(ctx contractapi.TransactionContextInterface, carNumber string, user string, newOwner string) error {
+func (s *SmartContract) VerifyAuction(ctx contractapi.TransactionContextInterface, carNumber string, user string) error {
 	car, err := s.QueryCar(ctx, carNumber)
 
 	if err != nil {

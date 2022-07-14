@@ -1,54 +1,59 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import broker 
 
 app = FastAPI()
 
 class Car(BaseModel):
     id: str
-    brand: str
-    price: float
-    color: str
+    model: str
+    colour: str
 
 class User(BaseModel):
     id: str
     name: str
 
-# Obtener
+# Obtener todos los carros registrados
 @app.get("/")
-def get_cars():
-    return {"items": []}
+async def get_cars():
+    cars = await broker.get_all_cars()
+    return cars
 
-# Registrar usuario
-@app.post("/register")
-def register_user(user: User):
-    return {"user_name": user.name}
+# Obtener un carro por su id
+@app.get("/cars/{car_id}")
+async def get_cars(car_id: int):
+    car = await broker.get_car(car_id)
+    return car
 
 ### Usuarios vendedores ###
 
-# Crear
+# Crear auto/subasta
 @app.post("/create")
-def create_auction(car: Car, owner: User):
-    return {"item_name": car.brand, "item_id": car.id, "owner_id": owner.id}
+async def create_auction(car: Car, owner: User):
+    new_car = await broker.create_car(car.id, car.model, car.colour, owner.id)
+    return new_car
 
-# Iniciar
+# Iniciar subasta de auto
 @app.post("/start")
-def start_auction(car: Car):
-    return {"item_name": car.brand, "item_id": car.id}
+async def start_auction(car: Car, owner: User):
+    auction = await broker.start_auction(car.id, owner.id)
+    return auction
 
-# Cerrar
+# Cerrar subasta
 @app.post("/close")
-def close_auction(car: Car):
-    return {"item_name": car.brand, "item_id": car.id}
+async def close_auction(car: Car, owner: User):
+    auction = await broker.close_auction(car.id, owner.id)
+    return auction
 
 # Validar
 @app.post("/validate")
-def validate_auction(car: Car):
-    return {"item_name": car.brand, "item_id": car.id}
-
+async def validate_auction(car: Car, owner: User):
+    new_owner = await broker.verify_auction(car.id, owner.id)
+    return new_owner
 
 ### Usuarios compradores ###
-
 # Pujar
 @app.post("/bid")
-def bid(car: Car, amount: int):
-    return {"item_name": car.brand, "item_id": car.id, "amount": amount}
+async def bid(car: Car, gambler: User, amount: int):    
+    bid = await broker.bid(car.id, gambler.id, amount)
+    return bid
